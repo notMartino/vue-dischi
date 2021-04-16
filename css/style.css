@@ -30,25 +30,33 @@
   }
   
   .album{
-    width: 200px;
-    margin: 10px;
+    width: 250px;
+    margin: 0 20px 10px;
     color: white;
     overflow: hidden;
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black;
   }
   
   .album img{
-    height: 200px;
+    height: 250px;
     width: 100%;
   }
   
+  .album li{
+    padding: 5px 0;
+  }
+  .album li:first-child{
+    border-bottom: 1px solid white;
+  }
+
   .album h2{
     text-shadow: 0 0 2px darkorchid, 0 0 2px darkorchid, 0 0 2px darkorchid;
   }
   
   .album h4{
+    /* color: tomato; */
     font-style: italic;
-    color:deeppink;
     font-weight: lighter;
     display: inline-block;
+    text-shadow: 0 0 2px tomato, 0 0 2px tomato, 0 0 2px tomato;
   }
