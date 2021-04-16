@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVA</title>
+
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+
+    <div id="target">
+      <div class="select">
+        <label for="genres">Filtra per genere: </label>
+        <select name="genres" id="genres" @change="filteredSongs()" v-model="filter"> 
+          <option value="0" selected>Tutti</option>
+          <option value="Rock">Rock</option>
+          <option value="Pop">Pop</option>
+          <option value="Metal">Metal</option>
+          <option value="Jazz">Jazz</option>
+        </select>
+      </div>
+
+      <div class="album" v-for="song in filteredSongs()">
+        <img :src="song.poster" alt="">
+        <ul>
+          <li>
+            <h2>
+              {{song.title}}
+            </h2>
+          </li>
+          <li>
+            <h4>
+              {{song.author}}  ({{song.year}})
+            </h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </body>    
+</html>
